@@ -47,7 +47,9 @@ html {
 `;
 
 const InnerStyles = styled.div`
-Inn
+  max-width: var(--maxWidth);
+  margin: 0 auto;
+  padding: 2rem;
 `;
 
 export default function Page({ children }) {
@@ -55,8 +57,10 @@ export default function Page({ children }) {
     <div>
       <GlobalStyles />
       <Header />
-      <h2> this is a page component </h2>
-      {children}
+      <InnerStyles>
+        <h2> this is a page component </h2>
+        {children}
+      </InnerStyles>
     </div>
   );
 }
